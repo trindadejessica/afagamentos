@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abílio António Trindade · Afagamentos e pavimentos de madeira em Porto Salvo</title>
+<meta name="description" content="Afagamento e envernizamento, colocação de tacos, soalho, flutuante e rodapés nos distritos de Lisboa e Setúbal. No ofício desde 1988. Orçamento gratuito: 962 654 267.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="icon" href="img/logotipo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="estilo.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Abílio António Trindade",
+  "description": "Afagamento e envernizamento, colocação de tacos, soalho, flutuante e rodapés.",
+  "telephone": "+351962654267",
+  "email": "abiliotrindade41@gmail.com",
+  "foundingDate": "1997",
+  "address": { "@type": "PostalAddress", "postalCode": "2740-253", "addressLocality": "Porto Salvo", "addressCountry": "PT" },
+  "areaServed": ["Distrito de Lisboa", "Distrito de Setúbal"]
+}
+</script>
+<style>
+  .abertura { display: grid; grid-template-columns: 1fr 0.9fr; gap: 3.5rem; align-items: center; padding-block: 2rem 4.5rem; }
+  .abertura .lead { font-size: 1.2rem; max-width: 36ch; margin: 0 0 2rem; color: var(--cinza); }
+  .acoes { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+  .foto-abertura img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; }
+  .foto-abertura figcaption { font-size: 0.9rem; color: var(--cinza); margin-top: 0.6rem; }
+  .foto-abertura { margin: 0; }
+  @media (max-width: 860px) {
+    .abertura { grid-template-columns: 1fr; gap: 2rem; padding-top: 0.5rem; }
+    .foto-abertura img { aspect-ratio: 4 / 3; }
+  }
+
+  .grupos { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+  .grupos h3 { font: 600 1.25rem var(--cond); color: var(--madeira); margin: 0 0 0.4rem; }
+  .servicos { margin: 0; }
+  .servicos.duas { display: grid; grid-template-columns: 1fr 1fr; column-gap: 3.5rem; }
+  .servicos.duas div:nth-child(2) { border-top: 1px solid var(--linha); }
+  @media (max-width: 760px) { .servicos.duas { grid-template-columns: 1fr; } .servicos.duas div:nth-child(2) { border-top: 0; } }
+  .servicos div { padding: 1.15rem 0; border-bottom: 1px solid var(--linha); }
+  .servicos div:first-child { border-top: 1px solid var(--linha); }
+  .servicos dt { font: 600 1.5rem/1.1 var(--cond); margin-bottom: 0.3rem; }
+  .servicos dd { margin: 0; color: var(--cinza); max-width: 46ch; }
+  .gratis { margin-top: 2.5rem; font: 600 1.35rem var(--cond); }
+  @media (max-width: 760px) { .grupos { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  .cartoes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 2.2rem; }
+  .cartao { color: var(--tinta); text-decoration: none; font: 600 1.15rem/1.2 var(--cond); }
+  .cartao img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 2px; margin-bottom: 0.6rem; }
+  .cartao:hover span { text-decoration: underline; text-decoration-color: var(--madeira); }
+  @media (max-width: 860px) { .cartoes { grid-template-columns: repeat(2, 1fr); } }
+
+  .sobre { display: grid; grid-template-columns: auto 1fr; gap: 3.5rem; align-items: start; }
+  .ano { font: 700 clamp(4.5rem, 11vw, 8rem)/0.85 var(--cond); color: var(--madeira); margin: 0; }
+  .ano small { display: block; font: 500 1.15rem/1.3 var(--cond); color: var(--cinza); margin-top: 0.7rem; }
+  .sobre p { max-width: 58ch; margin: 0 0 1rem; }
+  @media (max-width: 760px) { .sobre { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+  .contactos { background: var(--azul); color: var(--parede); border-top: 0; }
+  .contactos h2 { color: var(--parede); }
+  .contactos .intro { color: #F0DCD0; }
+  .contactos a { color: var(--parede); }
+  .linhas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .linhas h3 { font: 500 1.1rem var(--cond); color: #E2B9A6; margin: 0 0 0.3rem; }
+  .linhas p { margin: 0; font-size: 1.1rem; }
+  .linhas .tel { font: 700 2.2rem/1.1 var(--cond); text-decoration: none; }
+  .linhas .tel:hover { text-decoration: underline; }
+  .linhas .nota { font-size: 0.95rem; color: #F0DCD0; margin-top: 0.6rem; }
+  @media (max-width: 860px) { .linhas { grid-template-columns: 1fr; } }
+  .solucoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 2.5rem; margin: 0 0 3.5rem; padding: 0; list-style: none; }
+  .solucoes li { padding: 1.1rem 0; border-top: 1px solid var(--linha); }
+  .solucoes b { display: block; font: 600 1.35rem/1.15 var(--cond); margin-bottom: 0.25rem; }
+  .solucoes span { color: var(--cinza); font-size: 0.98rem; }
+  .padroes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin: 0; padding: 0; list-style: none; }
+  .padroes svg { display: block; width: 100%; aspect-ratio: 3 / 2; border-radius: 2px; }
+  .padroes b { display: block; font: 600 1.2rem var(--cond); margin-top: 0.55rem; }
+  .padroes span { color: var(--cinza); font-size: 0.95rem; }
+  .sub { font: 600 1.4rem var(--cond); color: var(--madeira); margin: 0 0 1rem; }
+  @media (max-width: 860px) { .solucoes { grid-template-columns: 1fr 1fr; } .padroes { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .solucoes { grid-template-columns: 1fr; } }
+
+  .passos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; counter-reset: p; }
+  .passos li { counter-increment: p; border-top: 3px solid var(--ambar); padding-top: 1rem; }
+  .passos li::before { content: counter(p); font: 700 2.4rem/1 var(--cond); color: var(--madeira); display: block; margin-bottom: 0.4rem; }
+  .passos b { display: block; font: 600 1.35rem/1.15 var(--cond); margin-bottom: 0.3rem; }
+  .passos span { color: var(--cinza); }
+  @media (max-width: 860px) { .passos { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .passos { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="faixa" aria-hidden="true"></div>
+<header class="wrap topo">
+  <a class="marca" href="index.html">
+    <img src="img/logotipo.svg" alt="" width="60" height="60">
+    <span><strong>Abílio António Trindade</strong><span>Pavimentos de madeira desde 1988</span></span>
+  </a>
+  <nav aria-label="Páginas">
+    <a href="index.html#servicos">Serviços</a>
+    <a href="galeria.html">Trabalhos</a>
+    <a href="index.html#solucoes">Soluções</a>
+    <a href="index.html#sobre">Sobre nós</a>
+    <a href="index.html#contactos">Contactos</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap abertura">
+    <div>
+      <h1>Debaixo do chão gasto há madeira como nova.</h1>
+      <p class="lead">Afagamento e envernizamento, colocação de tacos, soalho, flutuante e rodapés nos distritos de Lisboa e Setúbal e arredores. O orçamento é gratuito.</p>
+      <div class="acoes">
+        <a class="botao" href="tel:+351962654267"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Ligar 962 654 267</a>
+        <a class="botao claro" href="galeria.html">Ver trabalhos</a>
+      </div>
+    </div>
+    <figure class="foto-abertura">
+      <img src="img/taco-frisos-depois-1.jpg" srcset="img/taco-frisos-depois-1-640.jpg 640w, img/taco-frisos-depois-1.jpg 1200w" sizes="(max-width: 860px) 100vw, 500px" width="1200" height="1600" alt="Corredor com taco em espinha e frisos de várias madeiras, acabado de envernizar.">
+      <figcaption>Corredor com taco e frisos, depois do afagamento e do verniz.</figcaption>
+    </figure>
+  </div>
+
+  <section id="servicos">
+    <div class="wrap">
+      <h2>Serviços</h2>
+      <p class="intro">Recuperamos pavimentos de madeira antigos e colocamos pavimento novo, do primeiro taco ao último acabamento.</p>
+      <div>
+        <div>
+          <dl class="servicos duas">
+            <div><dt>Afagamento</dt><dd>Lixar o pavimento à máquina até tirar riscos, manchas e o verniz antigo, deixando a madeira à vista. Quando é preciso, betumam-se as juntas.</dd></div>
+            <div><dt>Envernizamento</dt><dd>Aplicação de verniz em várias demãos, para proteger a madeira e lhe dar o acabamento escolhido.</dd></div>
+            <div><dt>Assentamento e reparação</dt><dd>Colocação de pavimento novo, e reassentamento ou substituição de tacos soltos, partidos ou em falta.</dd></div>
+            <div><dt>Escadas</dt><dd>Afagamento e envernizamento de degraus e patamares em madeira.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="solucoes">
+    <div class="wrap">
+      <h2>Soluções de pavimento</h2>
+      <p class="intro">Há vários tipos de chão, e cada um tem o seu lugar. No orçamento ajudamos a escolher o mais indicado para a sua casa.</p>
+      <ul class="solucoes">
+        <li><b>Soalho maciço</b><span>Réguas compridas de madeira natural. Duram gerações e podem ser afagadas várias vezes.</span></li>
+        <li><b>Taco</b><span>Peças pequenas de madeira maciça, típicas das casas portuguesas, assentes em vários padrões.</span></li>
+        <li><b>Multicamada</b><span>Uma camada de madeira natural por cima de camadas de contraplacado. Tem o aspeto da madeira e é mais estável.</span></li>
+        <li><b>Flutuante laminado</b><span>Réguas de fibra de madeira com acabamento impresso. É económico e resiste bem aos riscos.</span></li>
+        <li><b>Vinílico</b><span>Réguas ou ladrilhos de vinil, de encaixe ou colados. Aguenta bem a humidade, por isso serve em cozinhas e casas de banho.</span></li>
+        <li><b>Rodapés e remates</b><span>As peças que fazem a ligação entre o chão e as paredes, as portas e outros pavimentos.</span></li>
+      </ul>
+      <p class="sub">Padrões de assentamento</p>
+      <ul class="padroes">
+        <li><svg viewBox="0 0 120 80" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="120" height="80" fill="#6E4320"/><rect x="-59.4" y="0.6" width="58.8" height="8.8" fill="#C68A4A"/><rect x="0.6" y="0.6" width="75.8" height="8.8" fill="#A9692F"/><rect x="77.6" y="0.6" width="62.8" height="8.8" fill="#B97B3C"/><rect x="-22.4" y="10.6" width="79.8" height="8.8" fill="#8E5727"/><rect x="58.6" y="10.6" width="66.8" height="8.8" fill="#C68A4A"/><rect x="-45.4" y="20.6" width="83.8" height="8.8" fill="#A9692F"/><rect x="39.6" y="20.6" width="70.8" height="8.8" fill="#B97B3C"/><rect x="111.6" y="20.6" width="87.8" height="8.8" fill="#8E5727"/><rect x="-8.4" y="30.6" width="74.8" height="8.8" fill="#C68A4A"/><rect x="67.6" y="30.6" width="61.8" height="8.8" fill="#A9692F"/><rect x="-31.4" y="40.6" width="78.8" height="8.8" fill="#B97B3C"/><rect x="48.6" y="40.6" width="65.8" height="8.8" fill="#8E5727"/><rect x="115.6" y="40.6" width="82.8" height="8.8" fill="#C68A4A"/><rect x="-54.4" y="50.6" width="69.8" height="8.8" fill="#A9692F"/><rect x="16.6" y="50.6" width="86.8" height="8.8" fill="#B97B3C"/><rect x="104.6" y="50.6" width="73.8" height="8.8" fill="#8E5727"/><rect x="-17.4" y="60.6" width="60.8" height="8.8" fill="#C68A4A"/><rect x="44.6" y="60.6" width="77.8" height="8.8" fill="#A9692F"/><rect x="-40.4" y="70.6" width="64.8" height="8.8" fill="#B97B3C"/><rect x="25.6" y="70.6" width="81.8" height="8.8" fill="#8E5727"/><rect x="108.6" y="70.6" width="68.8" height="8.8" fill="#C68A4A"/></svg><b>Réguas corridas</b><span>O padrão clássico do soalho.</span></li>
+        <li><svg viewBox="0 0 120 80" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="120" height="80" fill="#6E4320"/><polygon points="-16,-8 0,-24 0,-16 -16,0" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="-16,8 0,-8 0,0 -16,16" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="-16,24 0,8 0,16 -16,32" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="-16,40 0,24 0,32 -16,48" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="-16,56 0,40 0,48 -16,64" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="-16,72 0,56 0,64 -16,80" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="-16,88 0,72 0,80 -16,96" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="-16,104 0,88 0,96 -16,112" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="-16,120 0,104 0,112 -16,128" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="-16,136 0,120 0,128 -16,144" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="-16,152 0,136 0,144 -16,160" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="0,-32 16,-16 16,-8 0,-24" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="0,-16 16,0 16,8 0,-8" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="0,0 16,16 16,24 0,8" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="0,16 16,32 16,40 0,24" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="0,32 16,48 16,56 0,40" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="0,48 16,64 16,72 0,56" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="0,64 16,80 16,88 0,72" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="0,80 16,96 16,104 0,88" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="0,96 16,112 16,120 0,104" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="0,112 16,128 16,136 0,120" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="0,128 16,144 16,152 0,136" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="16,-8 32,-24 32,-16 16,0" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="16,8 32,-8 32,0 16,16" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="16,24 32,8 32,16 16,32" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="16,40 32,24 32,32 16,48" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="16,56 32,40 32,48 16,64" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="16,72 32,56 32,64 16,80" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="16,88 32,72 32,80 16,96" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="16,104 32,88 32,96 16,112" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="16,120 32,104 32,112 16,128" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="16,136 32,120 32,128 16,144" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="16,152 32,136 32,144 16,160" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="32,-32 48,-16 48,-8 32,-24" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="32,-16 48,0 48,8 32,-8" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="32,0 48,16 48,24 32,8" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="32,16 48,32 48,40 32,24" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="32,32 48,48 48,56 32,40" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="32,48 48,64 48,72 32,56" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="32,64 48,80 48,88 32,72" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="32,80 48,96 48,104 32,88" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="32,96 48,112 48,120 32,104" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="32,112 48,128 48,136 32,120" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="32,128 48,144 48,152 32,136" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="48,-8 64,-24 64,-16 48,0" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="48,8 64,-8 64,0 48,16" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="48,24 64,8 64,16 48,32" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="48,40 64,24 64,32 48,48" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="48,56 64,40 64,48 48,64" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="48,72 64,56 64,64 48,80" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="48,88 64,72 64,80 48,96" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="48,104 64,88 64,96 48,112" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="48,120 64,104 64,112 48,128" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="48,136 64,120 64,128 48,144" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="48,152 64,136 64,144 48,160" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="64,-32 80,-16 80,-8 64,-24" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="64,-16 80,0 80,8 64,-8" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="64,0 80,16 80,24 64,8" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="64,16 80,32 80,40 64,24" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="64,32 80,48 80,56 64,40" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="64,48 80,64 80,72 64,56" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="64,64 80,80 80,88 64,72" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="64,80 80,96 80,104 64,88" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="64,96 80,112 80,120 64,104" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="64,112 80,128 80,136 64,120" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="64,128 80,144 80,152 64,136" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="80,-8 96,-24 96,-16 80,0" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="80,8 96,-8 96,0 80,16" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="80,24 96,8 96,16 80,32" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="80,40 96,24 96,32 80,48" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="80,56 96,40 96,48 80,64" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="80,72 96,56 96,64 80,80" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="80,88 96,72 96,80 80,96" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="80,104 96,88 96,96 80,112" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="80,120 96,104 96,112 80,128" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="80,136 96,120 96,128 80,144" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="80,152 96,136 96,144 80,160" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="96,-32 112,-16 112,-8 96,-24" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="96,-16 112,0 112,8 96,-8" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="96,0 112,16 112,24 96,8" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="96,16 112,32 112,40 96,24" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="96,32 112,48 112,56 96,40" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="96,48 112,64 112,72 96,56" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="96,64 112,80 112,88 96,72" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="96,80 112,96 112,104 96,88" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="96,96 112,112 112,120 96,104" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="96,112 112,128 112,136 96,120" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="96,128 112,144 112,152 96,136" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="112,-8 128,-24 128,-16 112,0" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="112,8 128,-8 128,0 112,16" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="112,24 128,8 128,16 112,32" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="112,40 128,24 128,32 112,48" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="112,56 128,40 128,48 112,64" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="112,72 128,56 128,64 112,80" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="112,88 128,72 128,80 112,96" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/><polygon points="112,104 128,88 128,96 112,112" fill="#8E5727" stroke="#6E4320" stroke-width="1"/><polygon points="112,120 128,104 128,112 112,128" fill="#C68A4A" stroke="#6E4320" stroke-width="1"/><polygon points="112,136 128,120 128,128 112,144" fill="#A9692F" stroke="#6E4320" stroke-width="1"/><polygon points="112,152 128,136 128,144 112,160" fill="#B97B3C" stroke="#6E4320" stroke-width="1"/></svg><b>Espinha</b><span>Peças em zigue-zague, muito usado no taco.</span></li>
+        <li><svg viewBox="0 0 120 80" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="120" height="80" fill="#6E4320"/><rect x="0.5" y="0.5" width="19" height="4" fill="#C68A4A"/><rect x="0.5" y="5.5" width="19" height="4" fill="#A9692F"/><rect x="0.5" y="10.5" width="19" height="4" fill="#B97B3C"/><rect x="0.5" y="15.5" width="19" height="4" fill="#8E5727"/><rect x="0.5" y="20.5" width="4" height="19" fill="#C68A4A"/><rect x="5.5" y="20.5" width="4" height="19" fill="#A9692F"/><rect x="10.5" y="20.5" width="4" height="19" fill="#B97B3C"/><rect x="15.5" y="20.5" width="4" height="19" fill="#8E5727"/><rect x="0.5" y="40.5" width="19" height="4" fill="#C68A4A"/><rect x="0.5" y="45.5" width="19" height="4" fill="#A9692F"/><rect x="0.5" y="50.5" width="19" height="4" fill="#B97B3C"/><rect x="0.5" y="55.5" width="19" height="4" fill="#8E5727"/><rect x="0.5" y="60.5" width="4" height="19" fill="#C68A4A"/><rect x="5.5" y="60.5" width="4" height="19" fill="#A9692F"/><rect x="10.5" y="60.5" width="4" height="19" fill="#B97B3C"/><rect x="15.5" y="60.5" width="4" height="19" fill="#8E5727"/><rect x="20.5" y="0.5" width="4" height="19" fill="#C68A4A"/><rect x="25.5" y="0.5" width="4" height="19" fill="#A9692F"/><rect x="30.5" y="0.5" width="4" height="19" fill="#B97B3C"/><rect x="35.5" y="0.5" width="4" height="19" fill="#8E5727"/><rect x="20.5" y="20.5" width="19" height="4" fill="#C68A4A"/><rect x="20.5" y="25.5" width="19" height="4" fill="#A9692F"/><rect x="20.5" y="30.5" width="19" height="4" fill="#B97B3C"/><rect x="20.5" y="35.5" width="19" height="4" fill="#8E5727"/><rect x="20.5" y="40.5" width="4" height="19" fill="#C68A4A"/><rect x="25.5" y="40.5" width="4" height="19" fill="#A9692F"/><rect x="30.5" y="40.5" width="4" height="19" fill="#B97B3C"/><rect x="35.5" y="40.5" width="4" height="19" fill="#8E5727"/><rect x="20.5" y="60.5" width="19" height="4" fill="#C68A4A"/><rect x="20.5" y="65.5" width="19" height="4" fill="#A9692F"/><rect x="20.5" y="70.5" width="19" height="4" fill="#B97B3C"/><rect x="20.5" y="75.5" width="19" height="4" fill="#8E5727"/><rect x="40.5" y="0.5" width="19" height="4" fill="#C68A4A"/><rect x="40.5" y="5.5" width="19" height="4" fill="#A9692F"/><rect x="40.5" y="10.5" width="19" height="4" fill="#B97B3C"/><rect x="40.5" y="15.5" width="19" height="4" fill="#8E5727"/><rect x="40.5" y="20.5" width="4" height="19" fill="#C68A4A"/><rect x="45.5" y="20.5" width="4" height="19" fill="#A9692F"/><rect x="50.5" y="20.5" width="4" height="19" fill="#B97B3C"/><rect x="55.5" y="20.5" width="4" height="19" fill="#8E5727"/><rect x="40.5" y="40.5" width="19" height="4" fill="#C68A4A"/><rect x="40.5" y="45.5" width="19" height="4" fill="#A9692F"/><rect x="40.5" y="50.5" width="19" height="4" fill="#B97B3C"/><rect x="40.5" y="55.5" width="19" height="4" fill="#8E5727"/><rect x="40.5" y="60.5" width="4" height="19" fill="#C68A4A"/><rect x="45.5" y="60.5" width="4" height="19" fill="#A9692F"/><rect x="50.5" y="60.5" width="4" height="19" fill="#B97B3C"/><rect x="55.5" y="60.5" width="4" height="19" fill="#8E5727"/><rect x="60.5" y="0.5" width="4" height="19" fill="#C68A4A"/><rect x="65.5" y="0.5" width="4" height="19" fill="#A9692F"/><rect x="70.5" y="0.5" width="4" height="19" fill="#B97B3C"/><rect x="75.5" y="0.5" width="4" height="19" fill="#8E5727"/><rect x="60.5" y="20.5" width="19" height="4" fill="#C68A4A"/><rect x="60.5" y="25.5" width="19" height="4" fill="#A9692F"/><rect x="60.5" y="30.5" width="19" height="4" fill="#B97B3C"/><rect x="60.5" y="35.5" width="19" height="4" fill="#8E5727"/><rect x="60.5" y="40.5" width="4" height="19" fill="#C68A4A"/><rect x="65.5" y="40.5" width="4" height="19" fill="#A9692F"/><rect x="70.5" y="40.5" width="4" height="19" fill="#B97B3C"/><rect x="75.5" y="40.5" width="4" height="19" fill="#8E5727"/><rect x="60.5" y="60.5" width="19" height="4" fill="#C68A4A"/><rect x="60.5" y="65.5" width="19" height="4" fill="#A9692F"/><rect x="60.5" y="70.5" width="19" height="4" fill="#B97B3C"/><rect x="60.5" y="75.5" width="19" height="4" fill="#8E5727"/><rect x="80.5" y="0.5" width="19" height="4" fill="#C68A4A"/><rect x="80.5" y="5.5" width="19" height="4" fill="#A9692F"/><rect x="80.5" y="10.5" width="19" height="4" fill="#B97B3C"/><rect x="80.5" y="15.5" width="19" height="4" fill="#8E5727"/><rect x="80.5" y="20.5" width="4" height="19" fill="#C68A4A"/><rect x="85.5" y="20.5" width="4" height="19" fill="#A9692F"/><rect x="90.5" y="20.5" width="4" height="19" fill="#B97B3C"/><rect x="95.5" y="20.5" width="4" height="19" fill="#8E5727"/><rect x="80.5" y="40.5" width="19" height="4" fill="#C68A4A"/><rect x="80.5" y="45.5" width="19" height="4" fill="#A9692F"/><rect x="80.5" y="50.5" width="19" height="4" fill="#B97B3C"/><rect x="80.5" y="55.5" width="19" height="4" fill="#8E5727"/><rect x="80.5" y="60.5" width="4" height="19" fill="#C68A4A"/><rect x="85.5" y="60.5" width="4" height="19" fill="#A9692F"/><rect x="90.5" y="60.5" width="4" height="19" fill="#B97B3C"/><rect x="95.5" y="60.5" width="4" height="19" fill="#8E5727"/><rect x="100.5" y="0.5" width="4" height="19" fill="#C68A4A"/><rect x="105.5" y="0.5" width="4" height="19" fill="#A9692F"/><rect x="110.5" y="0.5" width="4" height="19" fill="#B97B3C"/><rect x="115.5" y="0.5" width="4" height="19" fill="#8E5727"/><rect x="100.5" y="20.5" width="19" height="4" fill="#C68A4A"/><rect x="100.5" y="25.5" width="19" height="4" fill="#A9692F"/><rect x="100.5" y="30.5" width="19" height="4" fill="#B97B3C"/><rect x="100.5" y="35.5" width="19" height="4" fill="#8E5727"/><rect x="100.5" y="40.5" width="4" height="19" fill="#C68A4A"/><rect x="105.5" y="40.5" width="4" height="19" fill="#A9692F"/><rect x="110.5" y="40.5" width="4" height="19" fill="#B97B3C"/><rect x="115.5" y="40.5" width="4" height="19" fill="#8E5727"/><rect x="100.5" y="60.5" width="19" height="4" fill="#C68A4A"/><rect x="100.5" y="65.5" width="19" height="4" fill="#A9692F"/><rect x="100.5" y="70.5" width="19" height="4" fill="#B97B3C"/><rect x="100.5" y="75.5" width="19" height="4" fill="#8E5727"/></svg><b>Quadrados</b><span>Grupos de tacos alternados, como um tecido.</span></li>
+        <li><svg viewBox="0 0 120 80" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="120" height="80" fill="#6E4320"/><rect x="0" y="0" width="120" height="80" fill="#5A3518"/><rect x="14" y="14" width="92" height="52" fill="#C68A4A"/><polygon points="4,9 9,4 14,9 9,14" fill="#E6C07E"/><polygon points="4,71 9,66 14,71 9,76" fill="#E6C07E"/><polygon points="14,9 19,4 24,9 19,14" fill="#E6C07E"/><polygon points="14,71 19,66 24,71 19,76" fill="#E6C07E"/><polygon points="24,9 29,4 34,9 29,14" fill="#E6C07E"/><polygon points="24,71 29,66 34,71 29,76" fill="#E6C07E"/><polygon points="34,9 39,4 44,9 39,14" fill="#E6C07E"/><polygon points="34,71 39,66 44,71 39,76" fill="#E6C07E"/><polygon points="44,9 49,4 54,9 49,14" fill="#E6C07E"/><polygon points="44,71 49,66 54,71 49,76" fill="#E6C07E"/><polygon points="54,9 59,4 64,9 59,14" fill="#E6C07E"/><polygon points="54,71 59,66 64,71 59,76" fill="#E6C07E"/><polygon points="64,9 69,4 74,9 69,14" fill="#E6C07E"/><polygon points="64,71 69,66 74,71 69,76" fill="#E6C07E"/><polygon points="74,9 79,4 84,9 79,14" fill="#E6C07E"/><polygon points="74,71 79,66 84,71 79,76" fill="#E6C07E"/><polygon points="84,9 89,4 94,9 89,14" fill="#E6C07E"/><polygon points="84,71 89,66 94,71 89,76" fill="#E6C07E"/><polygon points="94,9 99,4 104,9 99,14" fill="#E6C07E"/><polygon points="94,71 99,66 104,71 99,76" fill="#E6C07E"/><polygon points="104,9 109,4 114,9 109,14" fill="#E6C07E"/><polygon points="104,71 109,66 114,71 109,76" fill="#E6C07E"/><polygon points="114,9 119,4 124,9 119,14" fill="#E6C07E"/><polygon points="114,71 119,66 124,71 119,76" fill="#E6C07E"/><polygon points="4,19 9,14 14,19 9,24" fill="#E6C07E"/><polygon points="106,19 111,14 116,19 111,24" fill="#E6C07E"/><polygon points="4,29 9,24 14,29 9,34" fill="#E6C07E"/><polygon points="106,29 111,24 116,29 111,34" fill="#E6C07E"/><polygon points="4,39 9,34 14,39 9,44" fill="#E6C07E"/><polygon points="106,39 111,34 116,39 111,44" fill="#E6C07E"/><polygon points="4,49 9,44 14,49 9,54" fill="#E6C07E"/><polygon points="106,49 111,44 116,49 111,54" fill="#E6C07E"/><polygon points="4,59 9,54 14,59 9,64" fill="#E6C07E"/><polygon points="106,59 111,54 116,59 111,64" fill="#E6C07E"/><polygon points="4,69 9,64 14,69 9,74" fill="#E6C07E"/><polygon points="106,69 111,64 116,69 111,74" fill="#E6C07E"/><rect x="15.0" y="15.0" width="9.4" height="9.4" fill="#C68A4A"/><rect x="25.2" y="15.0" width="9.4" height="9.4" fill="#A9692F"/><rect x="35.4" y="15.0" width="9.4" height="9.4" fill="#B97B3C"/><rect x="45.599999999999994" y="15.0" width="9.4" height="9.4" fill="#8E5727"/><rect x="55.8" y="15.0" width="9.4" height="9.4" fill="#C68A4A"/><rect x="66.0" y="15.0" width="9.4" height="9.4" fill="#A9692F"/><rect x="76.19999999999999" y="15.0" width="9.4" height="9.4" fill="#B97B3C"/><rect x="86.39999999999999" y="15.0" width="9.4" height="9.4" fill="#8E5727"/><rect x="96.6" y="15.0" width="9.4" height="9.4" fill="#C68A4A"/><rect x="15.0" y="25.2" width="9.4" height="9.4" fill="#A9692F"/><rect x="25.2" y="25.2" width="9.4" height="9.4" fill="#B97B3C"/><rect x="35.4" y="25.2" width="9.4" height="9.4" fill="#8E5727"/><rect x="45.599999999999994" y="25.2" width="9.4" height="9.4" fill="#C68A4A"/><rect x="55.8" y="25.2" width="9.4" height="9.4" fill="#A9692F"/><rect x="66.0" y="25.2" width="9.4" height="9.4" fill="#B97B3C"/><rect x="76.19999999999999" y="25.2" width="9.4" height="9.4" fill="#8E5727"/><rect x="86.39999999999999" y="25.2" width="9.4" height="9.4" fill="#C68A4A"/><rect x="96.6" y="25.2" width="9.4" height="9.4" fill="#A9692F"/><rect x="15.0" y="35.4" width="9.4" height="9.4" fill="#B97B3C"/><rect x="25.2" y="35.4" width="9.4" height="9.4" fill="#8E5727"/><rect x="35.4" y="35.4" width="9.4" height="9.4" fill="#C68A4A"/><rect x="45.599999999999994" y="35.4" width="9.4" height="9.4" fill="#A9692F"/><rect x="55.8" y="35.4" width="9.4" height="9.4" fill="#B97B3C"/><rect x="66.0" y="35.4" width="9.4" height="9.4" fill="#8E5727"/><rect x="76.19999999999999" y="35.4" width="9.4" height="9.4" fill="#C68A4A"/><rect x="86.39999999999999" y="35.4" width="9.4" height="9.4" fill="#A9692F"/><rect x="96.6" y="35.4" width="9.4" height="9.4" fill="#B97B3C"/><rect x="15.0" y="45.599999999999994" width="9.4" height="9.4" fill="#8E5727"/><rect x="25.2" y="45.599999999999994" width="9.4" height="9.4" fill="#C68A4A"/><rect x="35.4" y="45.599999999999994" width="9.4" height="9.4" fill="#A9692F"/><rect x="45.599999999999994" y="45.599999999999994" width="9.4" height="9.4" fill="#B97B3C"/><rect x="55.8" y="45.599999999999994" width="9.4" height="9.4" fill="#8E5727"/><rect x="66.0" y="45.599999999999994" width="9.4" height="9.4" fill="#C68A4A"/><rect x="76.19999999999999" y="45.599999999999994" width="9.4" height="9.4" fill="#A9692F"/><rect x="86.39999999999999" y="45.599999999999994" width="9.4" height="9.4" fill="#B97B3C"/><rect x="96.6" y="45.599999999999994" width="9.4" height="9.4" fill="#8E5727"/><rect x="15.0" y="55.8" width="9.4" height="9.4" fill="#C68A4A"/><rect x="25.2" y="55.8" width="9.4" height="9.4" fill="#A9692F"/><rect x="35.4" y="55.8" width="9.4" height="9.4" fill="#B97B3C"/><rect x="45.599999999999994" y="55.8" width="9.4" height="9.4" fill="#8E5727"/><rect x="55.8" y="55.8" width="9.4" height="9.4" fill="#C68A4A"/><rect x="66.0" y="55.8" width="9.4" height="9.4" fill="#A9692F"/><rect x="76.19999999999999" y="55.8" width="9.4" height="9.4" fill="#B97B3C"/><rect x="86.39999999999999" y="55.8" width="9.4" height="9.4" fill="#8E5727"/><rect x="96.6" y="55.8" width="9.4" height="9.4" fill="#C68A4A"/></svg><b>Frisos e embutidos</b><span>Molduras e desenhos com madeiras de cores diferentes.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="como">
+    <div class="wrap">
+      <h2>Como trabalhamos</h2>
+      <p class="intro">Do primeiro contacto ao chão pronto a usar.</p>
+      <ol class="passos">
+        <li><b>Contacto</b><span>Diz-nos onde fica a obra, que pavimento tem e em que estado está.</span></li>
+        <li><b>Visita e orçamento</b><span>Vamos ao local ver o chão e conversar sobre o resultado que pretende. O orçamento é gratuito.</span></li>
+        <li><b>Execução</b><span>Assentamento, afagamento e envernizamento, conforme o que ficou combinado.</span></li>
+        <li><b>Entrega</b><span>O pavimento fica terminado e limpo, pronto a usar.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="trabalhos">
+    <div class="wrap">
+      <h2>Trabalhos</h2>
+      <p class="intro">Algumas obras, com fotografias de antes, durante e depois.</p>
+      <div class="cartoes">
+        <a class="cartao" href="galeria.html#taco-frisos">
+          <img src="img/taco-frisos-depois-2-640.jpg" width="640" height="480" loading="lazy" alt="">
+          <span>Taco com frisos decorativos, reassentado e recuperado</span>
+        </a>
+        <a class="cartao" href="galeria.html#espinha-friso">
+          <img src="img/espinha-friso-depois-1-640.jpg" width="640" height="480" loading="lazy" alt="">
+          <span>Taco em espinha com friso, colocado de novo</span>
+        </a>
+        <a class="cartao" href="galeria.html#embutidos">
+          <img src="img/embutidos-depois-1-640.jpg" width="384" height="640" loading="lazy" alt="">
+          <span>Tacos com embutidos</span>
+        </a>
+        <a class="cartao" href="galeria.html#escadas">
+          <img src="img/escadas-depois-2-640.jpg" width="480" height="640" loading="lazy" alt="">
+          <span>Escadas e patamares em pinho</span>
+        </a>
+      </div>
+      <a class="botao claro" href="galeria.html">Ver galeria de trabalhos</a>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap sobre">
+      <p class="ano">1988<small>no ofício desde então</small></p>
+      <div>
+        <h2>Sobre nós</h2>
+        <p>A empresa foi criada em 1997 e é gerida desde então por Abílio Trindade, que trabalha em afagamentos desde 1988.</p>
+        <p>É ele quem se desloca ao local para fazer o orçamento e conversar consigo sobre o que pretende para o seu pavimento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contactos" class="contactos">
+    <div class="wrap">
+      <h2>Peça um orçamento gratuito</h2>
+      <p class="intro">Ligue-nos ou envie-nos um e-mail com o local da obra, o tipo de pavimento que tem e o estado em que se encontra. Depois deslocamo-nos ao local para avaliar o trabalho e, juntos, encontramos a melhor solução para o resultado que pretende.</p>
+      <div class="linhas">
+        <div>
+          <h3>Telemóvel</h3>
+          <a class="tel" href="tel:+351962654267">962 654 267</a>
+        </div>
+        <div>
+          <h3>E-mail</h3>
+          <p><a href="mailto:abiliotrindade41@gmail.com?subject=Pedido%20de%20or%C3%A7amento">abiliotrindade41@gmail.com</a></p>
+        </div>
+        <div>
+          <h3>Morada</h3>
+          <p>Rua Professor Rómulo Carvalho, 14<br>2740-253 Porto Salvo</p>
+          <p class="nota">Sem atendimento presencial nesta morada. O orçamento é feito no local da obra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span class="ano-atual">2026</span> Abílio António Trindade</span>
+    <span>Site desenvolvido por Jéssica Trindade</span>
+  </div>
+</footer>
+<script>document.querySelectorAll('.ano-atual').forEach(e => e.textContent = new Date().getFullYear());</script>
+</body>
+</html>
